@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import pandas as pd
 
 #Ingesta del archivo "netflix.csv"
-df_Netflix=pd.read_csv("netflix.csv" , sep="," , encoding="utf-8")
+df_Netflix=pd.read_csv("./csv/netflix.csv" , sep="," , encoding="utf-8")
 
 #Cambia el tipo de la columna date_added a datetime
 df_Netflix["date_added"]=df_Netflix["date_added"].astype("datetime64")
