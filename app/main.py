@@ -40,17 +40,22 @@ app=FastAPI()
 
 #Creación de decoradores
 
+#Decorador 
+@app.get("/")
+async def hola():
+    return ["Para ingresar a los distintos diccionarios coloque /2019 , /2020 , /2021"]
+
 #Decorador correspondiente al año 2019 "dic19" 
 @app.get("/2019") 
-async def index(): #Creo la función que se ejecutará en la dirección indicada despues del "/"
+async def indexA(): #Creo la función que se ejecutará en la dirección indicada despues del "/"
     return dic19
 
 #Decorador correspondiente al año 2020 "dic20"
 @app.get("/2020")
-async def index():
+async def indexB():
     return dic20
 
 #Decorador correspondiente al año 2021 "dic21"
 @app.get("/2021")
-async def index():
+async def indexC():
     return dic21
